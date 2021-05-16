@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:28:35 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/09 19:51:06 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:53:28 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	f(int index, char const *s, char c)
 	return (length);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**o;
 	int		in;

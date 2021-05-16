@@ -6,13 +6,13 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:34:06 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/05 18:24:53 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:52:46 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_chek_nbr(int tmp)
+int	ft_chek_nbr(int tmp)
 {
 	int	i;
 
@@ -42,10 +42,12 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == 0)
 		ft_putchar_fd('0', fd);
 	else
+	{
 		while (i != 0)
 		{
 			ft_putchar_fd((char)(48 + ((n / i) * minus)), fd);
 			n %= i;
 			i /= 10;
 		}
+	}
 }

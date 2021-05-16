@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 09:56:50 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/10/30 21:07:45 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:53:47 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *src)
 	int		i;
 
 	i = ft_strlen(src);
-	buff = (char*)malloc(sizeof(char) * (i + 1));
+	buff = (char *)malloc(sizeof(char) * (i + 1));
 	if (buff == NULL)
 		return (NULL);
 	else

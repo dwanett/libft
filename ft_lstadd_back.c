@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 19:57:53 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/05 18:00:29 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:47:45 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	void *tmp;
+	void	*tmp;
 
 	if (lst)
 	{
@@ -22,7 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 		else if (new)
 		{
-			tmp = (void*)*lst;
+			tmp = (void *)*lst;
 			*lst = ft_lstlast(*lst);
 			(*lst)->next = new;
 			*lst = tmp;

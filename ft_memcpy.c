@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:54:33 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/03 21:58:47 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:52:11 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	tmp = (char*)dst;
-	tmp2 = (char*)src;
+	tmp = (char *)dst;
+	tmp2 = (char *)src;
 	if (tmp != NULL || tmp2 != NULL)
+	{
 		while (i != n)
 		{
 			tmp[i] = tmp2[i];
 			i++;
 		}
+	}
 	return (dst);
 }

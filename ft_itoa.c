@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 14:52:44 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/03 20:25:09 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:46:51 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_malc(int n, int i)
 	return (result);
 }
 
-int		ft_chek(int tmp)
+int	ft_chek(int tmp)
 {
 	int		i;
 

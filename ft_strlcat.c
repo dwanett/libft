@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 16:43:19 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/06 16:55:53 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:54:22 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (dst[i])
 		i++;
 	if (dstsize != 0)
+	{
 		while (i < dstsize - 1)
 		{
 			if (src[b] == '\0')
 				break ;
 			dst[i++] = src[b++];
 		}
+	}
 	dst[i] = '\0';
 	if (dstsize < len_dst)
 		return (dstsize + len_src);

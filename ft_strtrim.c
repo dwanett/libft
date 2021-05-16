@@ -6,13 +6,13 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:34:27 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/03 21:43:19 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:57:20 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_startcount(char const *s1, char const *set)
+int	ft_startcount(char const *s1, char const *set)
 {
 	int	f;
 	int	index;
@@ -39,7 +39,7 @@ int		ft_startcount(char const *s1, char const *set)
 	return (index);
 }
 
-int		ft_endcount(char const *s1, char const *set)
+int	ft_endcount(char const *s1, char const *set)
 {
 	int	f;
 	int	index;

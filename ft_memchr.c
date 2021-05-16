@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 18:23:06 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/12 18:20:21 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:51:33 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	tmp = (char*)s;
+	tmp = (char *)s;
 	while (i != n)
 	{
 		if (tmp[i] == c)

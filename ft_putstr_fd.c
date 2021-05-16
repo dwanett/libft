@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:27:16 by dwanetta          #+#    #+#             */
-/*   Updated: 2021/05/16 16:03:12 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:52:58 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int size;
+	int	size;
 
 	if (s != NULL)
 	{

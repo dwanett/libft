@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 20:50:47 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/04 21:01:10 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:48:31 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		while (lst->next != NULL)
 		{
-			(*f)((void*)lst->content);
+			(*f)((void *)lst->content);
 			lst = lst->next;
 		}
-		(*f)((void*)lst->content);
+		(*f)((void *)lst->content);
 	}
 }

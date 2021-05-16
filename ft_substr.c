@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:02:58 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/04 14:18:23 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:57:27 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = chek_size;
 	else if (len + start > chek_size)
 		len = chek_size - start;
-	str = (char*)malloc(sizeof(char) * len + 1);
+	str = (char *)malloc(sizeof(char) * len + 1);
 	if (str == NULL)
 		return (NULL);
 	len += start;
