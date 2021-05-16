@@ -62,6 +62,19 @@ static int	f(int index, char const *s, char c)
 	return (length);
 }
 
+char	**help_split(int *words, char const *s, char c)
+{
+	char	**o;
+
+	if (s == NULL)
+		return (NULL);
+	*words = ft_count_words(s, c);
+	o = (char **)malloc(sizeof(char *) * (*words + 1));
+	if (o == NULL)
+		return (NULL);
+	return (o);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**o;
@@ -70,17 +83,16 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	int		j;
 
-	if (s == NULL)
-		return (NULL);
 	in = 0;
 	i = 0;
-	words = ft_count_words(s, c);
-	if ((o = (char **)malloc(sizeof(char *) * (words + 1))) == NULL)
+	o = help_split(&words, s, c);
+	if (o == NULL)
 		return (NULL);
 	while (s[in] != '\0' && i < words && o != NULL)
 	{
 		in = ft_find_word_start(in, s, c);
-		if ((o[i] = (char *)malloc(sizeof(char) * (f(in, s, c) + 1))) == NULL)
+		o[i] = (char *)malloc(sizeof(char) * (f(in, s, c) + 1));
+		if (o[i] == NULL)
 			return (NULL);
 		j = 0;
 		while (s[in] != c && s[in] != '\0')
