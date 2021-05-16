@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+void	check_asc(int *i, const char *str)
+{
+	while (str[*i] == ' ' || str[*i] == '\f' || str[*i] == '\v'
+		|| str[*i] == '\t' || str[*i] == '\n' || str[*i] == '\r')
+		*i += 1;
+}
+
 int	ft_atoi(const char *str)
 {
 	long int	result;
@@ -21,9 +28,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	pluse = 1;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\v'
-		|| str[i] == '\t' || str[i] == '\n' || str[i] == '\r')
-		i++;
+	check_asc(&i, str);
 	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			pluse = -1;
