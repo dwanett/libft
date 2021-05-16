@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:21:45 by dwanetta          #+#    #+#             */
-/*   Updated: 2020/11/02 18:22:27 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/05/16 16:03:26 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*arr;
-	int		i;
 	int		full;
 
-	i = 0;
 	full = nmemb * size;
 	arr = (void *)malloc(full);
 	if (arr == NULL)
