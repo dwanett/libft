@@ -6,7 +6,7 @@
 /*   By: dwanetta <dwanetta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 13:48:00 by dwanetta          #+#    #+#             */
-/*   Updated: 2021/05/16 16:58:21 by dwanetta         ###   ########.fr       */
+/*   Updated: 2021/07/13 20:50:03 by dwanetta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+int					ft_printf(const char *fmt, ...);
+int					ft_chek_u(unsigned int tmp);
 
 #endif

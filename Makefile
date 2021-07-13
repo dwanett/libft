@@ -1,6 +1,7 @@
 NAME = libft.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
+HEADER = ft_printf/
 OPTION = -c
 SRCS =	ft_memset.c\
 		ft_strlen.c\
@@ -35,7 +36,16 @@ SRCS =	ft_memset.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c\
+		ft_printf/ft_printf.c\
+		ft_printf/ft_putchar.c\
+		ft_printf/ft_putnbr.c\
+		ft_printf/ft_puthex.c\
+		ft_printf/ft_putstr.c\
+		ft_printf/ft_print_char.c\
+		ft_printf/ft_print_dec.c\
+		ft_printf/ft_print_format.c\
+		ft_printf/ft_print_hex.c
 
 BONUS = ft_lstnew.c\
 		ft_lstadd_front.c\
@@ -54,7 +64,7 @@ OBJS_BONUS = ${BONUS:.c=.o}
 all: $(NAME)
 
 $(NAME) : $(OBJS_SRCS)
-		$(CC) $(FLAGS) $(OPTION) $(SRCS)
+		$(CC) $(FLAGS) $(OPTION) -I $(HEADER) $(SRCS)
 		ar rc $(NAME) $(OBJS_SRCS)
 		ranlib $(NAME)
 
@@ -63,7 +73,7 @@ bonus: $(OBJS_BONUS) $(OBJS_SRCS)
 		ar rc $(NAME) $(OBJS_BONUS)
 		ranlib $(NAME)
 clean:
-		rm -f $(OBJS_SRCS) $(OBJS_BONUS)
+		rm -f $(OBJS_SRCS) $(OBJS_BONUS) *.o
 fclean: clean
 		rm -f $(NAME)
 re: fclean all
