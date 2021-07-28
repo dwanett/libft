@@ -1,8 +1,7 @@
 NAME = libft.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
-OPTION = -c
-SRCS =	ft_memset.c\
+SRC =	ft_memset.c\
 		ft_strlen.c\
 		ft_bzero.c\
 		ft_memcpy.c\
@@ -35,9 +34,8 @@ SRCS =	ft_memset.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c
-
-BONUS = ft_lstnew.c\
+		ft_putnbr_fd.c\
+		ft_lstnew.c\
 		ft_lstadd_front.c\
 		ft_lstsize.c\
 		ft_lstlast.c\
@@ -47,24 +45,33 @@ BONUS = ft_lstnew.c\
 		ft_lstiter.c\
 		ft_lstmap.c
 
-OBJS_SRCS = ${SRCS:.c=.o}
-
-OBJS_BONUS = ${BONUS:.c=.o}
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME) : $(OBJS_SRCS)
-		$(CC) $(FLAGS) $(OPTION) $(SRCS)
-		ar rc $(NAME) $(OBJS_SRCS)
-		ranlib $(NAME)
+$(NAME): $(OBJ)
+	@echo "\n"
+	@echo "\033[0;32mCompiling libft..."
+	@ar rcs $(NAME) $(OBJ)
+	@echo "\n\033[0mDone !"
 
-bonus: $(OBJS_BONUS) $(OBJS_SRCS)
-		$(CC) $(FLAGS) $(OPTION) $(BONUS)
-		ar rc $(NAME) $(OBJS_BONUS)
-		ranlib $(NAME)
+%.o: %.c
+	@printf "\033[0;33mGenerating libft objects... %-33.33s\r" $@
+	@${CC} ${FLAGS} -c $< -o $@
+
 clean:
-		rm -f $(OBJS_SRCS) $(OBJS_BONUS)
-fclean: clean
-		rm -f $(NAME)
+	@echo "\nRemoving binaries..."
+	@rm -f $(OBJ)
+	@echo "\033[0m"
+
+fclean:
+	@echo "\033[0;31m\nDeleting objects..."
+	@rm -f $(OBJ)
+	@echo "\nDeleting executable..."
+	@rm -f $(NAME)
+	@echo "\nDeleting trash..."
+	@rm -f *.out
+	@echo "\033[0m"
+
 re: fclean all
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
